@@ -1,0 +1,24 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "Social network API, Users can share and react about thoughts. Add and delete friends.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pablogarciag02/Social-Network-API.git"
+  },
+  "author": "Pablo Eugenio Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "express":"4.18.1",
+    "moment":"2.29.4",
+    "mongoose":"6.4.5"
+  },
+  "bugs": {
+    "url": "https://github.com/Pablogarciag02/Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/Pablogarciag02/Social-Network-API#readme"
+}
