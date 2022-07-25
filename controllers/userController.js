@@ -35,6 +35,16 @@ const userController = {
     //Get a single user by his unique id:=:userID
     singleUser(req, res) {
         User.findOne({ _id: req.params.userId })
+        .populate({
+            path: "thoughts",
+            select: "-__v'"
+        })
+
+        .populate({
+            path: "friends",
+            select: "-__v'"
+        })
+
         .select("-__v") 
         .then((user) => 
         !user
@@ -72,7 +82,41 @@ const userController = {
         )
         .catch((err) => res.status(500).json(err));
     },
+
+    //Add new friend: Takes in the userId and the friend id which is the userId being added
+    //Add to set is used because $push will add the same friend multiple times which is bad for the logic of a social media api
+    newFriend( { params }, res) {
+        User.findByIdAndUpdate(
+            { _id: params.userId },
+            {$addToSet: {friends: params.friendId}},
+            { new: true }
+        )
+        .then((dbUserData) => {
+            if(!dbUserData) {
+                return res.status(404).json({message: "no user with this id!"});
+            }
+            res.json({message: "Friend Added!"});
+        })
+        .catch((err) => res.json(err));
+    },
+
+    //Bsically same as adding a friend except it pulls from the friend array and therefore removes friend.
+    deleteFriend( {params}, res) {
+        User.findByIdAndUpdate(
+            { _id: params.userId },
+            {$pull: {friends: params.friendId}},
+            { new: true }
+        )
+        .then((dbUserData) => {
+            if(!dbUserData) {
+                return res.status(404).json({message: "no user with this id!"});
+            }
+            res.json({message: "Removed Friend! :("});
+        })
+        .catch((err) => res.json(err));
+    }
     
+
 }
 
 
