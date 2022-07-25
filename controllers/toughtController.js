@@ -69,6 +69,39 @@ const thoughtController = {
             : res.json({message: "Thought Updated!"}) && (thought)
         )
         .catch((err) => res.status(500).json(err));
+    },
+
+    newReaction({ params, body }, res) {
+        Thought.findOneAndUpdate(
+            { _id: params.thoughtId },
+            { $addToSet: { reactions: body }},
+            { new: true , runValidators: true }
+        )
+        .then((reaction) => {
+            if(!reaction) {
+                res.status(404).json({message: "no thought with this id!!"});
+                return;
+            }
+            res.json({message: "Succesfully added reaction."});
+        })
+        .catch((err) => res.json(err));
+
+    },
+
+    deleteReaction({ params }, res) {
+        Thought.findOneAndUpdate(
+            {_id: params.thoughtId },
+            { $pull: { reactions: {reactionId: params.reactionId }}},
+            { new: true }
+        )
+        .then((reaction) => {
+            if(!reaction) {
+                res.status(404).json({message: "Cannot delete a reaction from a thought that doesn't exist."});
+                return;
+            }
+            res.json({message: "succesfully deleted reaction!"})
+        })
+        .catch((err) => res.json(err));
     }
 
 
