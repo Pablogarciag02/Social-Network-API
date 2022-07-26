@@ -4,7 +4,7 @@
 https://github.com/Pablogarciag02/Social-Network-API
 
 ## Youtube Link Showing Functionality
-[Youtube Video (Functionality)](https://tech-blog-adineradomx.herokuapp.com/)
+[Youtube Video (Functionality)](https://youtu.be/waw2NmxSmaQ)
 ## About this Project
 -Every fullstack developer must know how to manipualate the exchange of information within a mongodb non relational database environment
 
