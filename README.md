@@ -27,11 +27,12 @@ View all users
 create a user 
 
 ## Table of Contents
--Installation
--Credits
--Licence
--Features
--Contribution
+- [Installation] (#installation-for-dev)
+- [Established-routes-for-the-API] (#established-routes-for-the-api)
+- [Credits] (# credits)
+- [Licence] (#licence)
+- [Features] (#features)
+- [Contribution] (#contribution)
 
 
 
@@ -143,11 +144,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Features
--Sign in and log in
--Individiual sessions for each user
--The ability to view personal uploads and uploads from other people
--Deployed in heroku
--Connected to a database
+-Full routes for Users and Thoughts
+-Individual Friend list for each user
+-Individiual thoughts for each user
+-individual reactions for each thought
+
 
 ## Contribution
 Feel free to fork and use this project for your personal use. Or if you want to make it better you can ask for a pull request 
