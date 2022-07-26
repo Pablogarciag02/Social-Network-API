@@ -27,12 +27,12 @@ View all users
 create a user 
 
 ## Table of Contents
-- [Installation] (#installation-for-dev)
-- [Established-routes-for-the-API] (#established-routes-for-the-api)
-- [Credits] (# credits)
-- [Licence] (#licence)
-- [Features] (#features)
-- [Contribution] (#contribution)
+- [Installation](###installation-for-dev)
+- [Established-routes-for-the-API](#established-routes-for-the-api)
+- [Credits](#credits)
+- [Licence](#licence)
+- [Features](#features)
+- [Contribution](#contribution)
 
 
 
