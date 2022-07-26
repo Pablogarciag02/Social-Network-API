@@ -26,6 +26,7 @@ View all users
 ![Example2](/Assets/Example2.png)
 create a user 
 
+---
 ## Table of Contents
 - [Installation](###installation-for-dev)
 - [Established-routes-for-the-API](#established-routes-for-the-api)
@@ -34,8 +35,10 @@ create a user
 - [Features](#features)
 - [Contribution](#contribution)
 
+---
 
 
+---
 ### Installation for dev
 *Before starting steps* : Make sure you have mongodb running and open.
 
@@ -47,7 +50,9 @@ create a user
 
 *Step 4*: open localhost:3001 in insomnia and check out all the routes avilable.
 
+---
 
+---
 ### Established routes for the API
 #### API Routes
 
@@ -114,12 +119,15 @@ create a user
 
 * `DELETE` to pull and remove a reaction by the reaction's `reactionId` value
 
-
+---
 ### Credits
 Pablo Eugenio Garcia
 Github: [Pablogarciag02](https://github.com/Pablogarciag02)
 LinkedIn: [Pablo-Eugenio-Gacía](https://www.linkedin.com/in/pablo-garc%C3%ADa-08842621b/)
 
+---
+
+---
 ## Licence
 MIT License
 
@@ -143,13 +151,19 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+---
+
+---
 ## Features
 -Full routes for Users and Thoughts
 -Individual Friend list for each user
 -Individiual thoughts for each user
 -individual reactions for each thought
 
+---
 
+---
 ## Contribution
 Feel free to fork and use this project for your personal use. Or if you want to make it better you can ask for a pull request 
 
+---
